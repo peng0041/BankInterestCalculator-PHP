@@ -52,27 +52,18 @@ function ValidateRate($interestRate){
     }  
 }
 function ValidateName($name) { 
-//    $Pricipal=htmlspecialchars($Pricipal);
+    $Pricipal=htmlspecialchars($Pricipal);
    if (empty($name)) {
         $nameErrorMsg = '*   Pricipal can not be blank;';
         return $nameErrorMsg;
-//    } else {
-//        //$pricipalRegex="[0-9]";
-//        if (!preg_match("/^[a-zA-Z]*$/", $name)) {
-//            $nameErrorMsg = ' *  Pricipal should be  positive intege';
-//        } 
-//        return $nameErrorMsg;
-    }
-//  return $errPricipal;
-//   var_dump($name);
-//    <?php echo $_SERVER['PHP_SELF']; 
+
 }
 function ValidatePrincipal($principalAmount){
     if (empty($principalAmount)) {
         $principalErrorMsg = '*    Pricipal can not be blank;';
         return $principalErrorMsg;
     } else {
-        //$pricipalRegex="[0-9]";
+        
         if (!preg_match("/^[1-9*$]/", $principalAmount)) {
             $principalErrorMsg = ' *  Pricipal should be  positive intege';
         } 
